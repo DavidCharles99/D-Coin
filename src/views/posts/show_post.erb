@@ -1,0 +1,13 @@
+<div class="posts">
+  <div class="w3-panel w3-card">
+    <p> <%= @post.content %> </p>
+  </div>
+
+  <form method="post" action="/tweets/<%=@post.id%>/delete">
+    <input id="hidden" type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Delete Post">
+  </form>
+
+  <a href="/posts/<%=@post.id%>/edit">Edit Post </a>
+
+</div>

@@ -1,0 +1,10 @@
+<div class="show_posts">
+  <p> <%= current_user.username %> </p>
+  <h2>Posts:  </h2>
+
+  <% @posts.each do |post| %>
+    <div class="w3-panel w3-card">
+      <p> <%= post.content %> </p>
+    </div>
+  <% end %>
+</div>

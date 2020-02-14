@@ -4,7 +4,7 @@ configure do
   set :public_folder, 'public'
     set :views, 'src/views'
     enable :sessions
-    set :session_secret, "fwitter_secret"
+    set :session_secret, "dchat_secret"
 end
 class ApplicationController < Sinatra::Base
   get '/' do
