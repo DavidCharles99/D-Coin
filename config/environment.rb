@@ -1,7 +1,8 @@
-require 'bundler/setup'
-require 'active_record'
+ENV['SINATRA_ENV'] ||= "development"
 
-require './src/app'
-require './src/posts_controller'
-require './src/users_controller'
-require './src/models/user'
+require 'bundler/setup'
+Bundler.require(:default, ENV['SINATRA_ENV'])
+
+ActiveRecord::Base.establish_connection(ENV['SINATRA_ENV'].to_sym)
+
+require_all 'src'
