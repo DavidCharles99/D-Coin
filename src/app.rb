@@ -1,5 +1,4 @@
 require './config/environment'
-require 'sinatra'
 configure do
   set :public_folder, 'public'
     set :views, 'src/views'
